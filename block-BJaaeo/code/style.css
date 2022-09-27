@@ -1,0 +1,40 @@
+table {
+    color: white;
+    min-width: 50vw;
+    text-align: center;
+    border-spacing: 0.5em;
+    
+}
+td {
+    padding: 2em;
+    margin: 30px;
+    border-radius: 0.5em;
+    
+}
+
+
+.operation td {
+    background-color: rgb(113,0,50);
+    
+}
+
+.number {
+    background-color: rgb(206,206,207);
+    color: black;
+}
+
+.action {
+    background-color: rgb(4,128,129);
+}
+
+.clear {
+    background-color: rgb(61,29,17);
+}
+
+.result {
+    background-color: black;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    text-align: right;
+}

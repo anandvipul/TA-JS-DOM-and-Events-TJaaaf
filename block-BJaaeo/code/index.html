@@ -11,8 +11,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>🤯 Calculator 🤩</h1>
-
+    <center>
+      <h1>🤯 Calculator 🤩</h1>
+    <table>
+      <tr>
+        <td colspan="4" class="result">0</td>
+      </tr>
+      <tr class="operation">
+        <td data-value="+">+</td>
+        <td data-value="-">-</td>
+        <td data-value="*">*</td>
+        <td data-value="/">/</td>
+      </tr>
+      <tr>
+        <td data-value="7" class="number">7</td>
+        <td data-value="8" class="number">8</td>
+        <td data-value="9" class="number">9</td>
+        <td rowspan="4" class="action">=</td>
+      </tr>
+      <tr>
+        <td data-value="4" class="number">4</td>
+        <td data-value="5" class="number">5</td>
+        <td data-value="6" class="number">6</td>
+      </tr>
+      <tr>
+        <td data-value="1" class="number">1</td>
+        <td data-value="2" class="number">2</td>
+        <td data-value="3" class="number">3</td>
+      </tr>
+      <tr>
+        <td data-value="." class="number">.</td>
+        <td data-value="0" class="number">0</td>
+        <td class="clear">C</td>
+      </tr>
+    </table>
+    </center>
     <script src="./script.js"></script>
   </body>
 </html>

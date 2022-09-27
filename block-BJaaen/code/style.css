@@ -49,12 +49,12 @@ h2 {
 }
 
 #player .far, #player .choice {
-    color: dodgerblue;
+    color: rgb(235, 43, 52);
     cursor: pointer;
 }
 
-#computer .far, #player .choice {
-    color: rgb(235, 43, 52);
+#computer .far, #computer .choice {
+    color: dodgerblue
 }
 
 #player .far:last-of-type, #computer .far:last-of-type {

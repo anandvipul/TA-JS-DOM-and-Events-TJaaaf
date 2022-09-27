@@ -7,6 +7,9 @@ selection = {
   computer: "",
 };
 
+let scorePlayer = 0;
+let scoreComputer = 0;
+
 gameRule = {
   Rock: {
     win: "Scissor",
@@ -46,6 +49,8 @@ function matchSelection(event) {
     game(selection['human'], selection['computer']);
     selection["human"] = "";
     selection["computer"] = "";
+    setTimeout(() => {document.querySelector('#computerChoice').innerText = "";
+    document.querySelector('#playerChoice').innerText = "";}, 2000);
   }
 }
 
@@ -53,26 +58,28 @@ function game(player, computer) {
   if (player == "Rock") {
     computer == "Scissor" || computer == "Paper"
       ? computer == "Scissor"
-        ? console.log("Human Wins")
-        : console.log("Computer Wins")
+        ? scorePlayer += 1
+        : scoreComputer += 1
       : console.log("Its a Tie");
   }
 
   if (player == "Paper") {
     computer == "Scissor" || computer == "Rock"
       ? computer == "Rock"
-        ? console.log("Human Wins")
-        : console.log("Computer Wins")
+        ? scorePlayer += 1
+        : scoreComputer += 1
       : console.log("Its a Tie");
   }
 
   if (player == "Scissor") {
     computer == "Rock" || computer == "Paper"
       ? computer == "Paper"
-        ? console.log("Human Wins")
-        : console.log("Computer Wins")
+        ? scorePlayer += 1
+        : scoreComputer +=1
       : console.log("Its a Tie");
   }
+  document.querySelector("#playerScore").innerText = scorePlayer;
+  document.querySelector("#computerScore").innerText = scoreComputer;
 }
 
 let gc = document.querySelector("div.game-container");
@@ -80,4 +87,16 @@ gc.addEventListener("click", (event) => matchSelection(event));
 
 
 let cc = document.querySelector("div#computer");
-cc.addEventListener("click", (event) => console.log(event.target.dataset.choice));
+cc.addEventListener("click", (event) => document.querySelector('#computerChoice').innerText = event.target.dataset.choice.split(" ")[0]);
+
+
+let pc = document.querySelector("div#player");
+pc.addEventListener("click", (event) => document.querySelector('#playerChoice').innerText = event.target.dataset.choice.split(" ")[0]);
+
+
+function resetAll() {
+  scoreComputer = 0;
+  scorePlayer = 0;
+  document.querySelector("#playerScore").innerText = scorePlayer;
+  document.querySelector("#computerScore").innerText = scoreComputer;
+}

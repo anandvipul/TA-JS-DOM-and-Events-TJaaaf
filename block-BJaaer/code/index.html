@@ -28,8 +28,8 @@
           />
         </div>
         <div class="form-control">
-          <label for="movies">What do you love?</label>
-          <select id="gender" name="gender">
+          <label for="genre">What do you love?</label>
+          <select id="gender" name="genre">
             <option value="movies">Movies</option>
             <option value="series">Series</option>
             <option value="others">Others</option>
@@ -41,7 +41,7 @@
           <input
             id="color"
             type="color"
-            name="email"
+            name="color"
             placeholder="Enter your email"
           />
         </div>
@@ -52,7 +52,7 @@
             type="range"
             max="10"
             step="1"
-            name="email"
+            name="rating"
             placeholder="Enter your email"
           />
         </div>
@@ -91,6 +91,21 @@
         </div>
         <button type="submit">Submit</button>
       </form>
+    </div>
+
+    <div class="modal invisible">
+      <div class="container">
+        <span class="close">Close</span>
+      <ul>
+        <li class="title">Hello <span class="user-name"></span></li>
+        <li>Email: <span class="user-email"></span></li>
+        <li>Your Love: <span class="user-love"></span></li>
+        <li>Color: <span class="user-color"></span></li>
+        <li>Rating: <span class="user-rating"></span></li>
+        <li>Book Genre: <span class="user-genre"></span></li>
+        <li class="agreement">🤷‍♂️ You <span class="user-agree"></span> To Terms and Conditions</li>
+      </ul>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

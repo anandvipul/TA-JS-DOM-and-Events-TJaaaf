@@ -91,3 +91,28 @@ input[type='text'] {
 .terms {
   display: inline-block;
 }
+
+.invisible {
+  display: none;
+}
+
+.close {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.modal, .modal ul {
+  font-weight: bold;
+}
+
+.modal ul li {
+  padding-bottom: 1em;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.agreement {
+  text-decoration: underline;
+}

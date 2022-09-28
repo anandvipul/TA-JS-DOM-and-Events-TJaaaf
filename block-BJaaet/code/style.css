@@ -1,0 +1,28 @@
+.close {
+    display: none;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 100vh;
+    align-items: center;
+}
+
+li {
+    width: 100%;
+}
+
+.liFlex {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+span {
+    display: block;
+}

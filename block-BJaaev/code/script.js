@@ -1,3 +1,9 @@
+function updateLocalStorage(arr) {
+  localStorage[`todo`] = JSON.stringify(arr);
+  return JSON.parse(localStorage['todo']);
+}
+
+
 function updateUI(arr) {
   //Updates UI based on the array of objects given
   let taskContainer = document.querySelector("ul.taskContainer");
@@ -44,6 +50,7 @@ function toggleStatus(elem) {
         }
         resArr.push(i);
     }
+    tasksDictionaryArray = updateLocalStorage(resArr);
     updateUI(resArr);
 
   }
@@ -108,7 +115,8 @@ form.addEventListener("submit", (event) => {
   newTask.isDone = false;
   newTask.taskIndex = tasksDictionaryArray.length;
 
-  tasksDictionaryArray.unshift(newTask);
+  tasksDictionaryArray.push(newTask);
+  tasksDictionaryArray = updateLocalStorage(tasksDictionaryArray);
 
   updateUI(tasksDictionaryArray);
   event.target.elements.inputTaskField.value = "";
@@ -141,3 +149,6 @@ clear.addEventListener('click', () => {
     tasksDictionaryArray = [...arr];
     updateUI(tasksDictionaryArray);
 });
+
+
+updateUI(JSON.parse(localStorage[`todo`]));
